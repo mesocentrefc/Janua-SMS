@@ -1,0 +1,36 @@
+.x-chrome {
+    .x-form-text {
+        display: inline;
+    }
+}
+
+.background {
+    background-image: url(square.gif);
+}
+
+.smsusage {
+    label {
+        font-weight: bold;
+        color: #FFF;
+    }
+    .x-form-display-field {
+        font-weight: bold;
+        color: #FFF;
+    }
+}
+
+.hint {
+    .x-form-display-field {
+         font-size: 9px;
+    }   
+}
+
+.meso_logo {
+    width: 700px;
+    height: 125px;
+}
+
+.ufc_logo {
+    width: 320px;
+    height: 248px;
+}

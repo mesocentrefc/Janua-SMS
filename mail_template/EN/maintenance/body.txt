@@ -1,0 +1,8 @@
+Hello,
+
+A maintenance operation will start on $startdate at $starttime for $duration hour(s).
+
+During this operation all services will be unavailable.
+
+--------------------------------------------
+This mail has been sent by JanuaSMS platform

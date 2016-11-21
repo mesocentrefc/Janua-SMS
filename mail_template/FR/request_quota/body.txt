@@ -1,0 +1,12 @@
+Bonjour,
+
+Superviseur $name souhaiterait changer sa limite de quota
+
+$current_limit SMS per $current_unit
+
+en
+
+$new_limit SMS per $new_unit
+
+----------------------------------------------------
+Ce courriel a été envoyé par la plateforme Janua-SMS

@@ -1,0 +1,7 @@
+Hello,
+
+You have reached your quota limit of $limit SMS by $unit.
+You can ask to change your quota limit by using web interface.
+
+--------------------------------------------
+This mail has been sent by JanuaSMS platform

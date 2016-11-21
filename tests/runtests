@@ -1,0 +1,101 @@
+#!/usr/bin/env python
+# -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
+#
+# Copyright (c) 2016 Cédric Clerget - HPC Center of Franche-Comté University
+#
+# This file is part of Janua
+#
+# http://github.com/mesocentrefc/Janua
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation v2.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+import os
+import glob
+import sys
+import time
+import unittest
+from unittest import suite
+
+os.environ['JANUAPATH'] = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(os.path.abspath(os.path.join(os.environ['JANUAPATH'], '..')))
+
+import janua.main as main
+
+from janua.activity.activity import Activity
+from janua.utils.utilities import get_subclasses, import_available_modules
+from janua import jdb
+
+from custom.lib.consts import admin
+
+class TestLoaderWithKwargs(unittest.TestLoader):
+    """A test loader which allows to parse keyword arguments to the test case class."""
+    def loadTestsFromTestCase(self, testCaseClass, **kwargs):
+        """Return a suite of all tests cases contained in 
+           testCaseClass."""
+        if issubclass(testCaseClass, suite.TestSuite):
+            raise TypeError("Test cases should not be derived from "
+                            "TestSuite. Maybe you meant to derive from"
+                            " TestCase?")
+        self.sortTestMethodsUsing = None
+        testCaseNames = self.getTestCaseNames(testCaseClass)
+        if not testCaseNames and hasattr(testCaseClass, 'runTest'):
+            testCaseNames = ['runTest']
+
+        # Modification here: parse keyword arguments to testCaseClass.
+        test_cases = []
+        for test_case_name in testCaseNames:
+            test_cases.append(testCaseClass(test_case_name, **kwargs))
+        loaded_suite = self.suiteClass(test_cases)
+
+        return loaded_suite 
+
+class ProcessTest(Activity):
+    """
+    A unit tests process
+    """
+    def __init__(self, activity_manager, sms_engine, *args, **kwargs):
+        super(ProcessTest, self).__init__(*args, **kwargs)
+        self.activity_manager = activity_manager
+        self.sms_engine = sms_engine
+        self.failure = False
+
+    def run(self):
+        print "Load test cases ..."
+        time.sleep(0.5)
+
+        import_available_modules('case', os.environ['JANUAPATH'])
+        loader = TestLoaderWithKwargs()
+        suite = unittest.TestSuite()
+        for test in get_subclasses(unittest.TestCase):
+            if test.__module__.startswith('case.'):
+                suite.addTest(loader.loadTestsFromTestCase(test, sms=self.sms_engine))
+
+        test_results = unittest.TextTestRunner(verbosity=2).run(suite)
+        if test_results.failures:
+            self.failure = True
+
+        self.activity_manager.stop(None, None)
+
+    def quit(self):
+        for f in glob.glob('conf/*.db'):
+            os.remove(f)
+
+        if self.failure:
+            sys.exit(1)
+        else:
+            sys.exit(0)
+
+if __name__ == '__main__':
+    jdb.add_entry(admin)
+    main.start(dev=True, test_activity=ProcessTest)

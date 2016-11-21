@@ -1,0 +1,14 @@
+Hello,
+
+Your Janua-SMS account has been created.
+
+You can connect to Janua-SMS portal at $url
+and use your LDAP credentials.
+
+Or by using the following credentials:
+
+username: $phone_number
+password: $password
+
+--------------------------------------------
+This mail has been sent by JanuaSMS platform

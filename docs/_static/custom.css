@@ -1,0 +1,4 @@
+/* show <em> items as normal fonts */
+em {
+    font-style: normal;
+}

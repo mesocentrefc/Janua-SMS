@@ -1,0 +1,9 @@
+Bonjour,
+
+Une opération de maintenance aura lieu le $startdate à $starttime pour une
+durée de $duration heure(s).
+
+Durant cette opération tous les services seronts indisponibles.
+
+----------------------------------------------------
+Ce courriel a été envoyé par la plateforme Janua-SMS

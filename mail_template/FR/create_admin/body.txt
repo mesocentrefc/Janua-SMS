@@ -1,0 +1,12 @@
+Bonjour,
+
+Votre compte pour la plateforme Janua-SMS a été crée.
+
+Vous pouvez vous connecter au portail Janua-SMS à l'url $url
+avec les identifiants suivants:
+
+Utilisateur: $phone_number
+Mot de passe: $password
+
+----------------------------------------------------
+Ce courriel a été envoyé par la plateforme Janua-SMS

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="109"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logo_janua.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient6727"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop6729" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6379"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#e3dedb;stop-opacity:1;"
+         offset="0"
+         id="stop6381" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path5233"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <linearGradient
+       id="linearGradient5223"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5225" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3005"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6379"
+       id="linearGradient6558"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0000072,0,0,1.0000072,-10.000863,11.992633)"
+       x1="115.71515"
+       y1="999.74998"
+       x2="362.66943"
+       y2="999.74998" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="147.19388"
+     inkscape:cy="22.996844"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     width="1052.36px"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1367"
+     inkscape:window-x="1366"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-943.36218)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#a5141b;stroke:#000000;stroke-width:0.40000001000000002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.40000001000000002;marker-start:none;marker-mid:none;fill-opacity:1"
+       id="path3009"
+       sodipodi:cx="60"
+       sodipodi:cy="79"
+       sodipodi:rx="45"
+       sodipodi:ry="45"
+       d="m 105,79 a 45,45 0 1 1 -90,0 45,45 0 1 1 90,0 z"
+       transform="matrix(1.1282282,0,0,1.1282282,-16.086552,906.05358)" />
+    <text
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:url(#linearGradient6558);stroke-width:0.76400553999999998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="108.70597"
+       y="1024.3622"
+       id="text6357"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6359"
+         x="108.70597"
+         y="1024.3622"
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:url(#linearGradient6558);stroke-width:0.76400553999999998;stroke-miterlimit:4;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">Janua-SMS</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.60654539;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.40000001"
+       id="rect6733"
+       width="21.508701"
+       height="32.26305"
+       x="40.589348"
+       y="946.59991"
+       rx="5.2696319" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.49440020000000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.40000001000000002"
+       id="rect6733-7"
+       width="18.361786"
+       height="25.109348"
+       x="42.162807"
+       y="948.05182"
+       rx="4.4986377" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.56400001000000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.40000001000000002"
+       id="path6764"
+       sodipodi:cx="22.5"
+       sodipodi:cy="-58.5"
+       sodipodi:rx="2.5"
+       sodipodi:ry="2.5"
+       d="m 25,-58.5 a 2.5,2.5 0 1 1 -5,0 2.5,2.5 0 1 1 5,0 z"
+       transform="matrix(0.63612963,0,0,0.63612963,36.869069,1013.3054)" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.46744796999999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.40000001000000002"
+       d="m 42.973857,979.96056 -1.28125,2.21875 19.249995,0 -1.281245,-2.21875 -16.6875,0 z m -3.21875,5.59375 -2.8125,4.87502 28.749995,0 -2.8125,-4.87502 -23.124995,0 z m -4.84375,8.40622 -5.9375,10.28127 44.687495,0 -5.9375,-10.28127 -32.812495,0 z m -9.65625,16.71877 -8.65625,15 69.437495,0 -8.65625,-15 -52.124995,0 z"
+       id="rect6805"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

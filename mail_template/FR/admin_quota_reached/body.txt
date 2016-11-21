@@ -1,0 +1,7 @@
+Bonjour,
+
+Vous avez atteint votre limite d'envoi de SMS: $limit SMS by $unit.
+Vous pouvez demander à changer cette limite en passant par l'interface web.
+
+----------------------------------------------------
+Ce courriel a été envoyé par la plateforme Janua-SMS

@@ -1,0 +1,12 @@
+Hello,
+
+Supervisor $name would change his quota limit
+
+$current_limit SMS per $current_unit
+
+to
+
+$new_limit SMS per $new_unit
+
+--------------------------------------------
+This mail has been sent by JanuaSMS platform

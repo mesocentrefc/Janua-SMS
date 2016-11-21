@@ -1,0 +1,9 @@
+Type message:       $levelname
+Fichier:            $pathname:$lineno
+Module:             $module
+Fonction:           $funcName
+Date:               $asctime
+
+Message:
+
+$message

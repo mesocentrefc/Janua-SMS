@@ -1,0 +1,8 @@
+Bonjour,
+
+L'administrateur a changé votre quota SMS en
+
+$limit SMS per $unit
+
+----------------------------------------------------
+Ce courriel a été envoyé par la plateforme Janua-SMS

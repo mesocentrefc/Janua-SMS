@@ -1,0 +1,62 @@
+#!/bin/sh
+# Janua startup and shutdown script
+#
+### BEGIN INIT INFO
+# Provides:          janua
+# Required-Start:    $network $named
+# Required-Stop:     $network $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start Janua server at boot time
+# Description:       An active SMS gateway server.
+### END INIT INFO
+#
+# Janua        Janua startup and shutdown script
+#
+# chkconfig: - 47 74
+# description: An active SMS gateway server.
+
+export JANUAPATH=/opt/janua
+export PATH=$PATH:/usr/local/bin
+
+case "$1" in
+    start|--start)
+        janua start
+        echo "Janua started"
+        ;;
+    stop|--stop)
+        janua stop
+        echo "Janua stopped"
+        ;;
+    restart|--restart)
+        janua restart
+        echo "Janua restarted"
+        ;;
+    status|--status)
+        janua status
+        ;;
+    reload|--reload)
+        janua reload
+        ;;
+    debug|--debug)
+        janua debug
+        ;;
+    dev|--dev)
+        janua dev
+        ;;
+    genconf|--genconf)
+        janua genconf
+        ;;
+    test|--test)
+        shift
+        janua test $@
+        ;;
+    version)
+        janua version
+        ;;
+    *)
+        echo "usage: $0 {start|stop|restart|status|debug|dev|genconf|version}"
+        exit 2
+esac
+
+exit $?
