@@ -7,6 +7,4 @@ sqlalchemy==0.9.8
 pyserial
 mailer
 paste
-pysqlite
 mailem
-python-ldap
