@@ -114,7 +114,7 @@ setup(
     url = 'http://github.com/mesocentrefc/Janua-SMS',
     packages = janua_packages,
     data_files = data_files,
-    long_description = read('README'),
+    long_description = read('README.rst'),
     platforms = 'Linux',
     provides = janua_packages,
     classifiers = [
