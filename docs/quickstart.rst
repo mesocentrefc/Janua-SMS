@@ -15,7 +15,7 @@ Before setup installation, you must install these packages:
 
 Recommended way to install (as root user):
 
-* **With pip**: ``pip install janua-sms``
+* **With pip**: ``pip install janua-sms`` (not available yet)
 * **From source**: ``python setup.py install``
 
 By default, the installation directory is **/opt/janua** (this directory will be taken in documentation)
