@@ -37,6 +37,7 @@ class SendMail(Action):
          POST /sendmail HTTP/1.1
          Host: janua.mydomain.com
          Content-Type: application/json
+         JanuaAuthToken: abcdef123456789
 
          {
            "message": "A simple test message",
@@ -62,6 +63,7 @@ class SendMail(Action):
          POST /sendmail HTTP/1.1
          Host: janua.mydomain.com
          Content-Type: application/json
+         JanuaAuthToken: abcdef123456789
 
          {
            "to": "all",

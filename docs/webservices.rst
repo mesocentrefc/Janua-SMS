@@ -1,6 +1,14 @@
 Web services
 ============
 
+All web services require authentication, you can use Auth Basic
+authentication by using your credentials:
+
+http://login:password@janua.mydomain.com/get_sms_config
+
+Or by requesting a authentication token **JanuaAuthToken** and put it as HTTP
+header in all your requests
+
 **Authentication**
 ------------------
 

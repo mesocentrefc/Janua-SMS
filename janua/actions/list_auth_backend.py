@@ -34,6 +34,7 @@ class ListAuthBackend(Action):
        GET /list_auth_backend HTTP/1.1
        Host: janua.mydomain.com
        Content-Type: application/json
+       JanuaAuthToken: abcdef123456789
 
     Sample response:
 

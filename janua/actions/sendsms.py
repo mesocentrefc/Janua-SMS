@@ -26,15 +26,19 @@ from janua.ws.services import urlconfig
 
 class SendSms(Action):
     """
-    Send SMS
+    Send SMS to contacts and/or groups.
+    
+    **to** parameter can take a list of contacts phone number and/or groups
+    separated by comma.
 
-    Sample request send to all my contacts with special group 'all':
+    Sample request for sending to all my contacts with special group 'all':
 
     .. code-block:: javascript
 
        POST /sendsms HTTP/1.1
        Host: janua.mydomain.com
        Content-Type: application/json
+       JanuaAuthToken: abcdef123456789
 
        {
          "message": "Test",
@@ -52,6 +56,15 @@ class SendSms(Action):
          "success": true
        }
 
+    Send message to group **MESO** and contact with phone number **+33123456789**
+    with Curl:
+    
+    .. code-block:: bash
+
+       /usr/bin/curl -H "Content-Type: application/json" \\
+                     -X POST -d '{"message": "Test", "to": "+33123456789,MESO"}' \\
+                     -u "+33763140817:myuberpwd" \\
+                     https://janua.mydomain.com/sendsms
     """
 
     category = '__INTERNAL__'
@@ -74,5 +87,5 @@ class SendSms(Action):
 
     @argument(required=True)
     def to(self):
-        """Recipient(s)"""
+        """Recipient(s), mix phone and group separa"""
         return str()

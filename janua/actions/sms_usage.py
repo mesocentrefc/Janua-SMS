@@ -35,6 +35,7 @@ class SmsUsage(Action):
          GET /sms-usage HTTP/1.1
          Host: janua.mydomain.com
          Content-Type: application/json
+         JanuaAuthToken: abcdef123456789
 
       Sample response:
 
