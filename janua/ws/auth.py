@@ -43,7 +43,11 @@ from janua.utils import exit_error
 from janua.auth import AuthError, AuthConfigError
 from janua.auth.backend import AuthBackendManager
 from janua.auth.local_backend import Local
-from janua.auth.ldap_backend import Ldap
+try:
+    from janua.auth.ldap_backend import Ldap
+except ImportError:
+    # simply ignore if something failed
+    pass
 
 try:
     import_available_modules('custom.auth', januapath)
