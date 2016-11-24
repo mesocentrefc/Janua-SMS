@@ -87,10 +87,8 @@ class Daemon:
 
         os.chown(self.logfile, self.uid, self.gid)
         os.chmod(self.logfile, stat.S_IRUSR|stat.S_IWUSR|stat.S_IRGRP)
-        os.setgid(self.gid)
-        os.setegid(self.gid)
-        os.setuid(self.uid)
-        os.seteuid(self.uid)
+        os.setresgid(self.gid, self.gid, self.gid)
+        os.setresuid(self.uid, self.uid, self.uid)
 
     def start(self, *args, **kwargs):
         """
