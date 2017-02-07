@@ -310,7 +310,7 @@ class SerialSMS(SMSEngine):
                     del sms
                     return True
             else:
-                self.concat_message.update({ref: [sms.data]})
+                self.concat_message.update({ref: [sms]})
             del sms
             return False
         else:
