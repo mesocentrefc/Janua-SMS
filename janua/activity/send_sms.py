@@ -139,7 +139,7 @@ class SendSmsActivity(Activity):
                     except MailError, err:
                         log.critical(err[0])
 
-                    if mail_queue(mailobj):
+                    if mail_queue.put(mailobj):
                         log.info('Sending mail to %s, reason: quota reached' % data['supervisor'])
 
                     admin.last_quota_reached = current
