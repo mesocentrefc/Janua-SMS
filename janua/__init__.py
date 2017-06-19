@@ -83,14 +83,14 @@ except Exception, err:
 
 try:
     uid = pwd.getpwnam(config.janua.user).pw_uid
-    if (uid != 0 and uid != os.getuid()):
+    if (sys.argv[1] == "dev" and uid != 0 and uid != os.getuid()):
         uid = os.getuid()
 except KeyError:
     exit_error('User %s not found on system' %  config.janua.user)
 
 try:
     gid = grp.getgrnam(config.janua.group).gr_gid
-    if (gid != 0 and gid != os.getgid()):
+    if (sys.argv[1] == "dev" and gid != 0 and gid != os.getgid()):
         gid = os.getgid()
 except KeyError:
     exit_error('Group %s not found on system' %  config.janua.group)

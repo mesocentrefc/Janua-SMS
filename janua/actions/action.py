@@ -800,7 +800,10 @@ class Action(object):
             else:
                 sms_queue.put((message, contact, admin_id))
 
-        return True, 'SMS message has been queued'
+        if contacts:
+            return True, 'SMS message has been queued'
+
+        return False, 'No recipients was found in database to send SMS to %s' % to
 
     def send_email(self, subject=None, message=None, to=None, template=None, template_args={}, filtered=True):
         """
@@ -933,11 +936,11 @@ class Action(object):
         """
         Process notify message pool
         """
-        phone_numbers = set()
-        mail_to = set()
         flags = NotifyFlags
 
         for notify_args in self.notify.pool:
+            phone_numbers = set()
+            mail_to = set()
             notify_flags, arg = notify_args
             db_action = jdb.action.get_by_janua_id(self.get_id())
 
@@ -988,7 +991,7 @@ class Action(object):
                 if message:
                     data = message
                     log.info('Action notify: %s' % message)
-                if message:
+                if data:
                     success, message = self.send_sms(data, ','.join(phone_numbers), False)
                     if not success:
                         return message

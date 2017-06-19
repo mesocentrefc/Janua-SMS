@@ -44,7 +44,7 @@ class ProcessSmsActivity(Activity):
         super(ProcessSmsActivity, self).__init__(*args, **kwargs)
         self._sms = sms_interface
 
-    def execute_action(self, sms, arguments):
+    def execute_action(self, sms, arguments, keyword):
         body = sms['body']
         admin = sms['admin']
         contact = sms['contact']
@@ -77,7 +77,7 @@ class ProcessSmsActivity(Activity):
         if 'sms' in action.get_contexts():
             log.debug('Executing action %s' % action_name)
             try:
-                action.call_sms_context(arguments, False)
+                action.call_sms_context(arguments, keyword)
             except ActionError, err:
                 log.error('sms context error: %s' % err)
             except ActionNotifyError, err:
@@ -114,7 +114,7 @@ class ProcessSmsActivity(Activity):
                 return
 
         if password == admin.phone_token or sms_action.get_id() == 0:
-            self.execute_action(sms, arguments)
+            self.execute_action(sms, arguments, False)
         else:
             log.error('Bad password from %s' % admin.phone_number)
 
@@ -125,7 +125,7 @@ class ProcessSmsActivity(Activity):
         log.debug('Message received from %s with content: %s' % (phone_number, body))
 
         arguments = [arg for arg in body.split(' ')[1:] if arg != '']
-        self.execute_action(sms, arguments)
+        self.execute_action(sms, arguments, True)
 
     def log_sms(self, sms):
         recipient = 'Server'
@@ -258,7 +258,7 @@ class ProcessSmsActivity(Activity):
                     continue
 
                 actions = available_action_list()
-                action_keyword_dict = dict([(act.get_name(), act) for act in actions
+                action_keyword_dict = dict([(act.keyword, act) for act in actions
                                             if act.keyword and act.enabled])
 
                 for sms in smslist:
